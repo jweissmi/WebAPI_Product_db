@@ -14,7 +14,7 @@ namespace WebAPI_Product_db.Models
         public ProductRepository()
         {
             MyProductsEntities entities = new MyProductsEntities();
-            var test = entities.Products;
+            products = entities.Products.ToList();
         }
 
         public IEnumerable<Product> GetAll()
